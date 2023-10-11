@@ -22,7 +22,7 @@ namespace APIsAndJSON
         public async Task<double> GetTemperatureAsync(string city, string apiKey)
         {
             string weatherURL = $"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={apiKey}&units=imperial";
-            var response = await _client.GetAsync(weatherURL);
+            var response = await _client.GetStringAsync(weatherURL);
             var weatherObject = JObject.Parse(response);
             return (double)weatherObject["main"]["temp"];
                 

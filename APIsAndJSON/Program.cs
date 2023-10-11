@@ -6,6 +6,7 @@
         public static async Task Main(string[] args)
         {
             using HttpClient client = new HttpClient();
+             RonVSKanyeAPI.ConvoAsync();
 
             Console.WriteLine();
             Console.WriteLine();
@@ -13,7 +14,6 @@
             Console.WriteLine("Please enter the name of the city you wish to display the weather for:");
             var userInput = Console.ReadLine();
 
-            RonVSKanyeAPI.ConvoAsync();
 
             try
             {
